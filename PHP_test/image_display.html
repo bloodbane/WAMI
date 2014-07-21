@@ -5,86 +5,41 @@
     <title>Image</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-    <script type="text/javascript" src="./js/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="./js/image_display.js"></script>
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/processData.js"></script>
+    <script type="text/javascript" src="js/image_display.js"></script>
 
 
-    <link href="./css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="./css/display_image.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/display_image.css" rel="stylesheet">
 
 </head>
 <body>
 
 <div class="container">
+    <div id="test" class="container"></div>
 
-    <div class="row">
-        <div class="col-xs-3">
-            <a href="#" class="thumbnail">
-                <img src="http://placehold.it/350x200" class="img-responsive">
-            </a>
-        </div>
-        <div class="col-xs-3">
-            <a href="#" class="thumbnail">
-                <img src="http://placehold.it/350x200" class="img-responsive">
-            </a>
-        </div>
-        <div class="col-xs-3">
-            <a href="#" class="thumbnail">
-                <img src="http://placehold.it/350x200" class="img-responsive">
-            </a>
-        </div>
-        <div class="col-xs-3">
-            <a href="#" class="thumbnail">
-                <img src="http://placehold.it/350x200" class="img-responsive">
-            </a>
-        </div>
-        <div class="col-xs-3">
-            <a href="#" class="thumbnail">
-                <img src="http://placehold.it/350x200" class="img-responsive">
-            </a>
-        </div>
-        <div class="col-xs-3">
-            <a href="#" class="thumbnail">
-                <img src="http://placehold.it/350x200" class="img-responsive">
-            </a>
-        </div>
-        <div class="col-xs-3">
-            <a href="#" class="thumbnail">
-                <img src="http://placehold.it/350x200" class="img-responsive">
-            </a>
-        </div>
-        <div class="col-xs-3">
-            <a href="#" class="thumbnail">
-                <img src="http://placehold.it/350x200" class="img-responsive">
-            </a>
-        </div>
-        <div class="col-xs-3">
-            <a href="#" class="thumbnail">
-                <img src="http://placehold.it/350x200" class="img-responsive">
-            </a>
-        </div>
-        <div class="col-xs-3">
-            <a href="#" class="thumbnail">
-                <img src="http://placehold.it/350x200" class="img-responsive">
-            </a>
-        </div>
-        <div class="col-xs-3">
-            <a href="#" class="thumbnail">
-                <img src="http://placehold.it/350x200" class="img-responsive">
-            </a>
-        </div>
-        <div class="col-xs-3">
-            <a href="#" class="thumbnail">
-                <img src="http://placehold.it/350x200" class="img-responsive">
-            </a>
-        </div>
+
+    <br />
+
+    <!--
+    <div>
+        <form action="sever_script/upload_file.php" method="post" enctype="multipart/form-data">
+            <label for="file">Filename:</label>
+            <input type="file" name="file" id="file"><br>
+            <input type="submit" name="submit" value="Submit">
+        </form>
     </div>
 
-    <br>
-    <button id="try">Try it</button>
-    <div id="test">AI<div>
-
+    <div class="col-md-2" style="width: 250px">
+        <div id="image"></div>
+        <div style="vertical-align: top; margin-top: 10px;">
+            <span class="btn btn-sm btn-primary btn-file">Upload New File <input id="new_image" type="file" onchange="uploadImage()"></span>
+        </div>
+        <div id="image_upload_alerts" style="padding-top: 15px"></div>
+    </div>
+    -->
 </div>
 
 </body>
