@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-    <script type="text/javascript" src="./js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="./js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="./js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./js/hello.js"></script>
     <script type="text/javascript" src="//cdn.datatables.net/1.10.0/js/jquery.dataTables.js"></script>
@@ -64,6 +64,16 @@
         echo '<h1>Hello World!</h1>';
         ?>
     </p>
+    <?php
+    $array = array(1 => array(1,2));
+    $s2=array(2=>array(4,6));
+    array_push($array,$s2);
+    $response["result"] = $array;
+    $response["message"] = "Fetched the image url. ";
+    $out = array_values($response);
+    print_r($out);
+    ?>
+
     <!--
     <p>
         <script type="text/javascript">
@@ -111,7 +121,7 @@
     <div id="Lucy_2">Loading the player...</div>
 
     <div>
-        <form action="upload_file.php" method="post"
+        <form action="sever_script/upload_image.php" method="post"
                enctype="multipart/form-data">
             <label for="file">Filename:</label>
             <input type="file" name="file" id="file"><br>
