@@ -4,8 +4,9 @@
 
 function get_image(){
     var usr = 18;
+    var profile = 1;
     var url = "sever_script/get_image.php";
-    var params = "user_id=" + usr;
+    var params = "user_id=" + usr + "&profile_id=" + profile;
     var identifier = "result";
 
     localStorage.clear();
@@ -37,10 +38,15 @@ function display_image(){
         console.log(thumb_url);
         console.log(image.image_url);
 
-        content+="<div class=\"col-xs-3\">"+
-                    "<a class=\"thumbnail group3 cboxElement\" title=\""+ image.title +"\" href=\"."+ image.image_url +"\">"+
-                        "<img src=\""+ thumb_url +"\"></img>"+
-                    "</a>"+
+        content+="<div class='col-xs-3'>"+
+                        "<a class='thumbnail group3 cboxElement' title='"+ image.title +"' href='."+ image.image_url +"'>"+
+                            "<img src='"+ thumb_url +"'></img>"+
+                        "</a>"+
+
+                        "<label>"+
+                            "<input type='checkbox' value='"+image.title+"'>"+
+                            image.title+
+                        "</label>"+
                 "</div>";
         //var container = $( "<div>" ).attr("class", "col-xs-3").appendTo("#images");
         //var image_link = $( "<a>").attr("class", "thumbnail").appendTo(container);
