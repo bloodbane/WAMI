@@ -29,6 +29,7 @@ function uploadImage() {
             image_id.innerHTML = "";
             preview.src = reader.result;
             image_id.appendChild(preview);
+            $("#image_modal").modal('show');
         }
 
     //save to file system and database

@@ -16,21 +16,31 @@ function get_image(){
         return message;
     }
     var result_data = localStorage.getItem("result");
+    console.log(result_data);
     var result_obj = JSON.parse(result_data);
     var result = result_obj.result;
+    console.log(result);
     message = result_obj.message;
 
-    return [result, message];
+    return {"result":result, "message":message};
 }
 
 function display_image(){
-    var images=get_image();
-    var image_info=images.result;
+    var return_obj=get_image();
+    console.log(images);
+    var image_info=return_obj.result;
+    console.log(image_info);
+    var thumb_url;
     $.each(image_info,function(i,image){
-        $( "<img>" ).attr( "src", image.thumb_url).appendTo( "#test" );
+        thumb_url="."+image.thumb_url;
+        console.log(thumb_url);
+        var container = $( "<div>" ).attr("class", "col-xs-3").appendTo("#images");
+        var image_link = $( "<a>").attr("class", "thumbnail").appendTo(container);
+        $( "<img>" ).attr("src", thumb_url).appendTo( image_link );
+        console.log(i);
     });
     console.log("successed on ajax");
-    console.log(image_url);
+    //console.log(image_info);
     //$("#test").html(data.responseText);
 }
 
@@ -39,4 +49,6 @@ function show_error(){
     $("#test").html("failed");
 }
 
-display_image();
+$(document).ready(function(){
+    display_image();
+});
