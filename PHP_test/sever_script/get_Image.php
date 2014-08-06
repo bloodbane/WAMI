@@ -9,46 +9,40 @@
 $response = array();
 require_once __DIR__ . '/db_connect.php';
 $user_id= $_POST["user_id"];
+//$profile_id = $_POST["profileid"];
 
 $db = new DB_CONNECT();
 $con = $db->connect() or die('Could not connect: ' . mysql_error());
-$con->autocommit(FALSE);
+if (isset($_POST["order"])){
 
+}else{
+    $order = "identity_profiler_id DESC";
+}
 
-try {
-    $sql="SELECT * FROM identity_profiler WHERE user_id = ".$user_id;
-    $result = mysqli_query($con,$sql) or die(mysqli_error($con));
-    if (!$result) {
-        $response["message"] = "get_image: Problem get image: " .$username. " MySQL Error: " .mysqli_error($con);
-        $response["result"] = null;
-        $con->rollback();
-        $con->autocommit(TRUE);
-        echo json_encode($response);
-        exit(-1);
-    }
-
-
-}catch (Exception $e){
-    $response["result"] = null;
-    $response["message"] = "get_image.php: Transaction failed: " . $e->getMessage();
-    $con->rollback();
-    $con->autocommit(TRUE);
+$sql="SELECT * FROM identity_profiler WHERE user_id = ".$user_id." ORDER BY ".$order;
+$result = mysqli_query($con,$sql) or die(mysqli_error($con));
+if (!$result) {
+    $response["message"] = "get_image: Problem get image: " . $username . " MySQL Error: " . mysqli_error($con);
+    $response["image_collection"] = null;
     echo json_encode($response);
-    return;
+    exit(-1);
 }
 
 //$con->commit();
 //$con->autocommit(TRUE);
 
-$image_batch=array();
+$response["image_collection"]=array();
 $image=array();
 while($row = mysqli_fetch_array($result)) {
     $image["image_url"]=$row['profiler_url'];
-    $image["thumb_url"]=$row['preview_url'];
-    array_push($image_batch,$image);
+    $filename = end(explode("/", $image["image_url"]));
+    $image["thumb_url"]=str_replace($filename, "thumbnail/".$filename, $image["image_url"]);
+    $image["title"] = $row['title'];
+    $image["description"]=$row['description'];
+    array_push($response["image_collection"],$image);
 }
 
-$response["result"] = $image_batch;
+$response["ret_code"] = 0;
 $response["message"] = "Fetched the image url. ";
 echo json_encode($response);
 ?>

@@ -10,17 +10,28 @@
     <script type="text/javascript" src="js/processData.js"></script>
     <script type="text/javascript" src="js/image_display.js"></script>
     <script type="text/javascript" src="js/image_upload.js"></script>
+    <script type="text/javascript" src="js/jquery.colorbox.js"></script>
+
 
 
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="css/display_image.css" rel="stylesheet">
+    <link href="css/colorbox.css" rel="stylesheet">
+
 
 </head>
 <body>
 
 <div class="container">
-    <div id="test" class="container">
-        <div id="images" class="row"></div>
+    <div id="test" class="container" style="padding-top: 15px">
+        <div style="width: 150px">
+            <select class="form-control">
+                <option>Dog Lover</option>
+                <option>Programmer</option>
+            </select>
+        </div>
+
+        <div id="images" class="row" style="padding-top: 15px"></div>
     </div>
 
 
@@ -28,7 +39,7 @@
 
     <!--
     <div>
-        <form action="sever_script/upload_file.php" method="post" enctype="multipart/form-data">
+        <form action="sever_script/upload_image.php" method="post" enctype="multipart/form-data">
             <label for="file">Filename:</label>
             <input type="file" name="file" id="file"><br>
             <input type="submit" name="submit" value="Submit">
@@ -38,24 +49,45 @@
     <div class="col-md-2" style="width: 250px">
         <!--<div id="image"></div>-->
         <div style="vertical-align: top; margin-top: 10px;">
-            <span class="btn btn-sm btn-primary btn-file">Upload New File <input id="new_image" type="file" onchange="uploadImage()"></span>
+            <span class="btn btn-sm btn-primary btn-file">Upload New File <input id="new_image" type="file" onchange="previewImage()"></span>
+            <div id="file_type_alerts" style="padding-top: 15px"></div>
         </div>
-        <div id="image_upload_alerts" style="padding-top: 15px"></div>
     </div>
 
     <div id="image_modal" class="modal fade">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <h4 class="modal-title">Modal title</h4>
+                    <h4 class="modal-title">Upload Image</h4>
                 </div>
-                <div id="image" class="modal-body">
-                    <p>One fine body&hellip;</p>
+                <div class="modal-body">
+                    <div id="image_upload_alerts" style="padding-top: 15px"></div>
+                    <br />
+                    <div id="image"></div>
+                    <br />
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label>User Name</label>
+                            <input type="text" class="form-control" id="username" />
+                        </div>
+                        <div class="col-md-4">
+                            <label>Profile Id</label>
+                            <input type="text" class="form-control" id="profileid" />
+                        </div>
+                        <div class="col-md-4">
+                            <label>Title</label>
+                            <input type="text" class="form-control" id="title" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea class="form-control" id="descrip" size="256"  cols="40" rows="4" style="max-width: 100%"></textarea>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-primary" id="upload_btn" onclick="uploadImage()">Save changes</button>
                 </div>
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->

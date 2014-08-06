@@ -121,7 +121,7 @@
     <div id="Lucy_2">Loading the player...</div>
 
     <div>
-        <form action="sever_script/upload_file.php" method="post"
+        <form action="sever_script/upload_image.php" method="post"
                enctype="multipart/form-data">
             <label for="file">Filename:</label>
             <input type="file" name="file" id="file"><br>
