@@ -4,8 +4,9 @@
 
 function get_image(){
     var usr = 18;
+    var profile = 1;
     var url = "sever_script/get_image.php";
-    var params = "user_id=" + usr;
+    var params = "user_id=" + usr + "&profile_id=" + profile;
     var identifier = "result";
 
     localStorage.clear();
@@ -16,29 +17,44 @@ function get_image(){
         return message;
     }
     var result_data = localStorage.getItem("result");
-    console.log(result_data);
+    //console.log(result_data);
     var result_obj = JSON.parse(result_data);
-    var result = result_obj.result;
-    console.log(result);
+    var image_collection = result_obj.image_collection;
+    //console.log(result);
     message = result_obj.message;
 
-    return {"result":result, "message":message};
+    return {"image_collection":image_collection, "message":message};
 }
 
 function display_image(){
     var return_obj=get_image();
-    console.log(images);
-    var image_info=return_obj.result;
-    console.log(image_info);
+    //console.log(images);
+    var image_info=return_obj.image_collection;
+    //console.log(image_info);
     var thumb_url;
+    var content="";
     $.each(image_info,function(i,image){
         thumb_url="."+image.thumb_url;
         console.log(thumb_url);
-        var container = $( "<div>" ).attr("class", "col-xs-3").appendTo("#images");
-        var image_link = $( "<a>").attr("class", "thumbnail").appendTo(container);
-        $( "<img>" ).attr("src", thumb_url).appendTo( image_link );
+        console.log(image.image_url);
+
+        content+="<div class='col-xs-3'>"+
+                        "<a class='thumbnail group3 cboxElement' title='"+ image.title +"' href='."+ image.image_url +"'>"+
+                            "<img src='"+ thumb_url +"'></img>"+
+                        "</a>"+
+
+                        "<label>"+
+                            "<input type='checkbox' value='"+image.title+"'>"+
+                            image.title+
+                        "</label>"+
+                "</div>";
+        //var container = $( "<div>" ).attr("class", "col-xs-3").appendTo("#images");
+        //var image_link = $( "<a>").attr("class", "thumbnail").appendTo(container);
+        //$( "<img>" ).attr("src", thumb_url).appendTo( image_link );
         console.log(i);
     });
+    document.getElementById("images").innerHTML=content;
+    $(".group3").colorbox({rel:'group3'});
     console.log("successed on ajax");
     //console.log(image_info);
     //$("#test").html(data.responseText);
