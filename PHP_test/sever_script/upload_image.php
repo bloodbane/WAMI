@@ -39,6 +39,8 @@ function make_thumb($ext, $src, $dest, $desired_width){
 
 function createThumbs( $folder, $fname, $pathToThumbs )
 {
+    $folder = "..".$folder;
+    $pathToThumbs= "..".$pathToThumbs;
     $system=explode('.',$fname);
 
     if (preg_match('/jpg|jpeg/',$system[sizeof($system)-1])){
@@ -49,7 +51,7 @@ function createThumbs( $folder, $fname, $pathToThumbs )
     }
 
 
-    echo "Creating thumbnail for {$fname} <br />";
+    //echo "Creating thumbnail for {$fname} <br />";
 
     // load image and get image size
     $old_w = imagesx($img);
@@ -111,13 +113,22 @@ function storeImage($url, $dest, $filename){
     $image = substr($image, 1);
     $image = str_replace(' ', '+', $image);
     $data = base64_decode($image);
-    file_put_contents($dest.$filename, $data);
-    return true;
+    return file_put_contents($dest.$filename, $data);
 }
 
 $response = array();
 require_once __DIR__ . '/db_connect.php';
-$username = $_POST['username'];
+
+//print_r($_POST);
+
+if(isset($_POST['username'])){
+    $username = $_POST['username'];
+}else{
+    echo "don't recieve username";
+}
+
+
+//$username = $_POST['username'];
 $profileid = $_POST['profileid'];
 
 if(isset($_POST['title'])){
@@ -159,13 +170,15 @@ if(!storeImage($dataurl, $folder, $filename)){
     exit(-1);
 }
 
-$src = $folder . $filename;
-$dest = $folder . "thumbs/" . $filename;
+//$src = $folder . $filename;
+
+$dest = $folder . "thumbs/";
+//$dest = $folder . "thumbs/" . $filename;
 //$width = 282;
 //make_thumb($filetype, $src, $dest, $width);
 createThumbs($folder,$filename,$dest);
-$sql = "INSERT INTO `identity_profiler`(`user_id`, `profile_id`, `category`, `media_type`, `file_type`, `profiler_url`, `title`, `description`, `delete_ind`, `create_date`, `modified_date`)
-								VALUES ('".$userid."','".$profileid."','Pictures','Picture','".$filetype."','".$folder . $filename."','".$title."','".$descrip."', 0, '".$date."','".$date."')";
+$sql = "INSERT INTO `identity_profiler`(`user_id`, `profile_id`, `category`, `media_type`, `file_type`, `profiler_url`, `title`, `file_name`,`description`, `delete_ind`, `create_date`, `modified_date`)
+								VALUES ('".$userid."','".$profileid."','Pictures','Picture','".$filetype."','".$folder . $filename."','".$title."','".$filename."','".$descrip."', 0, '".$date."','".$date."')";
 
 $result = mysqli_query($con, $sql) or die(mysqli_error($con));
 if (!$result) {
@@ -178,5 +191,5 @@ if (!$result) {
 $response["ret_code"] = 0;
 $response["message"] = "New profile image saved. ";
 echo json_encode($response);
-echo "work";
+//echo "work";
 ?>

@@ -44,6 +44,8 @@ function uploadImage(){
     if (file) {
         byte_reader.readAsDataURL(file);
     }
+    //localStorage.clear();
+    var identifier = "result";
 
     //save to file system and database
     byte_reader.onloadend =
@@ -58,15 +60,15 @@ function uploadImage(){
             var filename = file.name;
             var username = document.getElementById("username").value;
 
-            var params = "title=" + title + "&image_src=" + image_src + "&profileid=" + identity_profile_id +
-                            "&descrip=" +descrip+"&filename="+filename+"&username="+username;
+            var params = "title=" + title + "&profileid=" + identity_profile_id +
+                "&descrip=" +descrip+"&filename="+filename+"&username="+username+"&image_src=" + image_src ;
             var url = "sever_script/upload_image.php";
-            var status = processData(params, url, "result");
+            var status = processData(params, url, identifier);
             if (status != 200) {
                 my_wami_alert("Error getting web page: status = " + status, "alert-danger", "Error!  ", "image_upload");
                 return;
             }
-            var result_data = localStorage.getItem("result");
+            var result_data = localStorage.getItem(identifier);
             var result_obj = JSON.parse(result_data);
 
             var ret_code = result_obj.ret_code;
@@ -75,10 +77,11 @@ function uploadImage(){
                 return;
             } else{
                 $("#image_modal").modal('hide');
+                get_image();
             }
+
         }
 
-    get_image();
 }
 
 // Alert messages

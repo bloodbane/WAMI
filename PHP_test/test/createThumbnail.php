@@ -50,7 +50,7 @@ function createThumbs( $folder, $fname, $pathToThumbs, $thumbWidth )
 // in which thumbnails will be placed and the thumbnail's width.
 // We are assuming that the path will be a relative path working
 // both in the filesystem, and through the web for links
-createThumbs("upload/", "FlowChart.png","upload/thumbs/",283);
+createThumbs("upload/", "flowbreeze-order-flowchart.png","upload/thumbs/",283);
 
 
 ?>

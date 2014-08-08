@@ -5,6 +5,7 @@
 function get_image(){
     var usr = 18;
     var profileid = document.getElementById("profile_select").value;
+    console.log(profileid);
     var url = "sever_script/get_image.php";
     var params = "user_id=" + usr+"&profileid="+profileid;
     var identifier = "result";
@@ -36,11 +37,11 @@ function display_image(){
     var content="";
     $.each(image_info,function(i,image){
         thumb_url="."+image.thumb_url;
-        console.log(thumb_url);
-        console.log(image.image_url);
+        //console.log(thumb_url);
+        //console.log(image.image_url);
 
         content+="<div class=\"col-xs-3 image-dis-col\">"+
-                    "<a class=\"thumbnail group3 cboxElement\" title=\""+ image.title +"\" href=\"."+ image.image_url +"\">"+
+                    "<a class=\"thumbnail group3 cboxElement\" title=\""+ image.description +"\" href=\"."+ image.image_url +"\">"+
                         "<img src=\""+ thumb_url +"\"></img>"+
                     "</a>"+
                     "<label style='text-align: center'>"+
@@ -51,7 +52,7 @@ function display_image(){
         //var container = $( "<div>" ).attr("class", "col-xs-3").appendTo("#images");
         //var image_link = $( "<a>").attr("class", "thumbnail").appendTo(container);
         //$( "<img>" ).attr("src", thumb_url).appendTo( image_link );
-        console.log(i);
+        //console.log(i);
     });
     document.getElementById("images").innerHTML=content;
     $(".group3").colorbox({rel:'group3', transition:"none", width:"60%", height:"75%"});
@@ -67,4 +68,5 @@ function show_error(){
 
 $(document).ready(function(){
     display_image();
+    $("#profile_select").change(display_image);
 });
