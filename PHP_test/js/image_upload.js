@@ -77,7 +77,7 @@ function uploadImage(){
                 return;
             } else{
                 $("#image_modal").modal('hide');
-                get_image();
+                display_image();
             }
 
         }
