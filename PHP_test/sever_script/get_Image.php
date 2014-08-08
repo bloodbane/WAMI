@@ -36,7 +36,7 @@ $image=array();
 while($row = mysqli_fetch_array($result)) {
     $image["image_url"]=$row['profiler_url'];
     $filename = end(explode("/", $image["image_url"]));
-    $image["thumb_url"]=str_replace($filename, "thumbnail/".$filename, $image["image_url"]);
+    $image["thumb_url"]=str_replace($filename, "thumbs/".$filename, $image["image_url"]);
     $image["title"] = $row['title'];
     $image["description"]=$row['description'];
     array_push($response["image_collection"],$image);

@@ -37,8 +37,64 @@ function make_thumb($ext, $src, $dest, $desired_width){
     }
 }
 
+function createThumbs( $folder, $fname, $pathToThumbs )
+{
+    $system=explode('.',$fname);
+
+    if (preg_match('/jpg|jpeg/',$system[sizeof($system)-1])){
+        $img=imagecreatefromjpeg("{$folder}{$fname}");
+    }
+    if (preg_match('/png/',$system[sizeof($system)-1])){
+        $img=imagecreatefrompng("{$folder}{$fname}");
+    }
+
+
+    echo "Creating thumbnail for {$fname} <br />";
+
+    // load image and get image size
+    $old_w = imagesx($img);
+    $old_h = imagesy($img);
+
+    $thumb_w = 320;
+    $thumb_h = 280;
+
+    $src_ratio = $old_w/$old_h;
+    $thumb_ratio = $thumb_w/$thumb_h;
+
+    //calculate rectangle zone select on src_file
+    if ($src_ratio>$thumb_ratio) {
+        $new_h = $old_h;
+        $new_w = $old_h*$thumb_ratio;
+        $crop_x = ($old_w-$new_w)/2;
+        $crop_y = 0;
+    }
+    if ($src_ratio<$thumb_ratio) {
+        $new_w = $old_w;
+        $new_h = $old_w/$thumb_ratio;
+        $crop_x = 0;
+        $crop_y = ($old_h-$new_h)/2;
+    }
+    if ($src_ratio==$thumb_ratio) {
+        $new_w = $old_w;
+        $new_h = $old_h;
+        $crop_x = 0;
+        $crop_y = 0;
+    }
+
+    // create a new temporary image
+    $tmp_img = imagecreatetruecolor( $thumb_w, $thumb_h );
+
+    // copy and resize old image into new image
+    imagecopyresized( $tmp_img, $img, 0, 0, $crop_x, $crop_y, $thumb_w, $thumb_h, $new_w, $new_h );
+
+    // save thumbnail into a file
+    imagepng( $tmp_img, "{$pathToThumbs}{$fname}" );
+
+}
+
+
 function get_userid($name, $con){
-    $query = "SELECT `user_id` FROM `user` WHERE `user_name`='".$name."'";
+    $query = "SELECT `user_id` FROM `user` WHERE `username`='".$name."'";
     if(!mysqli_query($con, $query) || !mysqli_fetch_array(mysqli_query($con, $query))){
         return -1;
     }else{
@@ -47,60 +103,80 @@ function get_userid($name, $con){
 }
 
 function storeImage($url, $dest, $filename){
+    $dest= "..".$dest;
     if(file_exists($dest.$filename)){
-        return true;
+        return false;
     }
     $image = strstr($url, ',');
     $image = substr($image, 1);
     $image = str_replace(' ', '+', $image);
     $data = base64_decode($image);
     file_put_contents($dest.$filename, $data);
-    return false;
+    return true;
 }
-
-
 
 $response = array();
 require_once __DIR__ . '/db_connect.php';
 $username = $_POST['username'];
 $profileid = $_POST['profileid'];
-$title = $_POST['title'];
-$descrip = $_POST['descrip'];
-$date = NOW();
+
+if(isset($_POST['title'])){
+    $title = $_POST['title'];
+}else{
+    $title = "";
+}
+if(isset($_POST['descrip'])){
+    $descrip = $_POST['descrip'];
+}else{
+    $descrip = "";
+}
+
+$date = date("Y-m-d H:i:s");
 
 
 $filename = $_POST['filename'];
 $filetype = end(explode(".", $filename));
 $allowedExts = array("png", "jpg", "jpeg");
-$folder = "../profilerdata/" .$username."/pic/";
+$folder = "/profilerdata/" .$username."/pic/";
 $dataurl = $_POST['image_src'];
 
 // Connect to MySQL
 $db = new DB_CONNECT();
 $con = $db->connect();
-$con->autocommit(FALSE);
 
 $userid = get_userid($username, $con);
 if($userid == -1){
-    $msg = $username . ' does not exist!';
-    die();
+    $response["ret_code"] = -1;
+    $response["message"] = $username . ' does not exist!';
+    echo json_encode($response);
+    exit(-1);
 }
 
-if(storeImage($dataurl, $folder, $filename)){
-    $msg = 'File('. $filename . ') already exists!';
-    die();
+if(!storeImage($dataurl, $folder, $filename)){
+    $response["ret_code"] = -1;
+    $response["message"] = 'File('. $filename . ') already exists!';
+    echo json_encode($response);
+    exit(-1);
 }
 
-$query = "INSERT INTO `identity_profiler`(`user_id`, `profile_id`, `category`, `media_type`, `file_type`, `profiler_url`, `title`, `description`, `delete_ind`, `create_date`, `modified_date`)
-								VALUES ('".$userid."','".$profileid."','Pictures','Picture','".$filetype."','".$folder . $title."','".$imagename."','".$descrip."', 0, ".$date.",'".$date."')";
-mysqli_query($con, $query);
 $src = $folder . $filename;
-$dest = $folder . "thumb/" . $filename;
-$width = 282;
-make_thumb($filetype, $src, $dest, $width);
+$dest = $folder . "thumbs/" . $filename;
+//$width = 282;
+//make_thumb($filetype, $src, $dest, $width);
+createThumbs($folder,$filename,$dest);
+$sql = "INSERT INTO `identity_profiler`(`user_id`, `profile_id`, `category`, `media_type`, `file_type`, `profiler_url`, `title`, `description`, `delete_ind`, `create_date`, `modified_date`)
+								VALUES ('".$userid."','".$profileid."','Pictures','Picture','".$filetype."','".$folder . $filename."','".$title."','".$descrip."', 0, '".$date."','".$date."')";
+
+$result = mysqli_query($con, $sql) or die(mysqli_error($con));
+if (!$result) {
+    $response["ret_code"] = -1;
+    $response["message"] = "upload_image.php: Problem updating identity_profile table. MySQL Error: " .mysqli_error($con);
+    echo json_encode($response);
+    exit(-1);
+}
 
 $response["ret_code"] = 0;
 $response["message"] = "New profile image saved. ";
 echo json_encode($response);
-echo "wokr?";
+echo "work";
 ?>

@@ -1,3 +1,10 @@
+body{font:12px/1.2 Verdana, sans-serif; padding:0 10px;}
+a:link, a:visited{text-decoration:none; color:#416CE5; border-bottom:1px solid #416CE5;}
+
+.modal-body{
+    text-align: center;
+}
+
 .btn-file {
     position: relative;
     overflow: hidden;
@@ -21,8 +28,8 @@
 
 
 
-.col-xs-3{
-    height: 250px;
+.image-dis-col{
+    height: 280px;
     overflow: hidden;
 }
 
@@ -31,13 +38,28 @@
     max-height: 100%;
 }
 
-
-body{font:12px/1.2 Verdana, sans-serif; padding:0 10px;}
-a:link, a:visited{text-decoration:none; color:#416CE5; border-bottom:1px solid #416CE5;}
-
-.modal-body{
-    text-align: center;
+.thumbnail{
+    margin: 0;
 }
 
+label {
+    display: block;
+}
+
+input {
+    //position: absolute;
+    padding: 0;
+    margin:0;
+}
+
+/*
+.image-dis-col label {
+    display: block;
+    text-align: center;
+    line-height: 150%;
+    font-size: .85em;
+}
+
+*/
 
 

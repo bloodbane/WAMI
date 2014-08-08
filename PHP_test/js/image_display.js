@@ -37,13 +37,13 @@ function display_image(){
         console.log(thumb_url);
         console.log(image.image_url);
 
-        content+="<div class=\"col-xs-3\">"+
+        content+="<div class=\"col-xs-3 image-dis-col\">"+
                     "<a class=\"thumbnail group3 cboxElement\" title=\""+ image.title +"\" href=\"."+ image.image_url +"\">"+
                         "<img src=\""+ thumb_url +"\"></img>"+
                     "</a>"+
-                    "<label>"+
-                        "<input type='checkbox' value='"+image.title+"'>"+
-                        image.title+
+                    "<label style='text-align: center'>"+
+                    "<input type='checkbox' value='"+image.title+"'>"+
+                    image.title+
                     "</label>"+
                 "</div>";
         //var container = $( "<div>" ).attr("class", "col-xs-3").appendTo("#images");
@@ -52,7 +52,7 @@ function display_image(){
         console.log(i);
     });
     document.getElementById("images").innerHTML=content;
-    $(".group3").colorbox({rel:'group3'});
+    $(".group3").colorbox({rel:'group3', transition:"none", width:"60%", height:"75%"});
     console.log("successed on ajax");
     //console.log(image_info);
     //$("#test").html(data.responseText);

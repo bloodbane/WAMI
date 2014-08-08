@@ -7,6 +7,10 @@ function previewImage() {
 
     //get file and check type
     var file = document.getElementById('new_image').files[0];
+    document.getElementById("username").value="";
+    document.getElementById("profileid").value="";
+    document.getElementById("title").value="";
+    document.getElementById("descrip").value="";
     var imageType = /image.*/;
     if (!file.type.match(imageType)) {
         my_wami_alert("File must be either a .jpg or .png image type.", "alert-danger", "Error!  ", "file_type_alerts");

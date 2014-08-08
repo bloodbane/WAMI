@@ -62,6 +62,7 @@
          * Time: 9:35 PM
          */
         echo '<h1>Hello World!</h1>';
+        echo time();
         ?>
     </p>
     <?php
