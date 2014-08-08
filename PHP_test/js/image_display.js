@@ -4,9 +4,11 @@
 
 function get_image(){
     var usr = 18;
+    var profileid = document.getElementById("profile_select").value;
     var url = "sever_script/get_image.php";
-    var params = "user_id=" + usr;
+    var params = "user_id=" + usr+"&profileid="+profileid;
     var identifier = "result";
+
 
     localStorage.clear();
     var message;

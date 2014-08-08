@@ -8,7 +8,8 @@
 
 $response = array();
 require_once __DIR__ . '/db_connect.php';
-$user_id= $_POST["user_id"];
+$user_id = $_POST["user_id"];
+$profile_id = $_POST["profileid"];
 //$profile_id = $_POST["profileid"];
 
 $db = new DB_CONNECT();
@@ -19,7 +20,8 @@ if (isset($_POST["order"])){
     $order = "identity_profiler_id DESC";
 }
 
-$sql="SELECT * FROM identity_profiler WHERE user_id = ".$user_id." ORDER BY ".$order;
+$sql="SELECT * FROM identity_profiler WHERE user_id = ".$user_id." AND " .
+        "profile_id=". $profile_id ." ORDER BY ".$order;
 $result = mysqli_query($con,$sql) or die(mysqli_error($con));
 if (!$result) {
     $response["message"] = "get_image: Problem get image: " . $username . " MySQL Error: " . mysqli_error($con);

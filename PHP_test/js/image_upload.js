@@ -51,7 +51,8 @@ function uploadImage(){
             var image_src = byte_reader.result;
             console.log(image_src);
             var identity_profile_id = localStorage.getItem("identity_profile_id");
-            identity_profile_id = document.getElementById("profileid").value;
+            identity_profile_id = document.getElementById("profile_select").value;
+            console.log(identity_profile_id);
             var title = document.getElementById("title").value;
             var descrip = document.getElementById("descrip").value;
             var filename = file.name;
