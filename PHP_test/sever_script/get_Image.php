@@ -14,17 +14,19 @@ $profile_id = $_POST["profileid"];
 
 $db = new DB_CONNECT();
 $con = $db->connect() or die('Could not connect: ' . mysql_error());
+$con->autocommit(FALSE);
+
 if (isset($_POST["order"])){
 
 }else{
     $order = "identity_profiler_id DESC";
 }
 
-$sql="SELECT * FROM identity_profiler WHERE (user_id = ".$user_id." AND " .
-        "profile_id=". $profile_id .") ORDER BY ".$order;
+$sql="SELECT * FROM `identity_profiler` WHERE (`user_id` = ".$user_id." AND " .
+        "`profile_id` = ". $profile_id . " AND " . " `delete_ind` = 0 " . ") ORDER BY ".$order;
 $result = mysqli_query($con,$sql) or die(mysqli_error($con));
 if (!$result) {
-    $response["message"] = "get_image: Problem get image: " . $username . " MySQL Error: " . mysqli_error($con);
+    $response["message"] = "POST_image: Problem POST image: " . $username . " MySQL Error: " . mysqli_error($con);
     $response["image_collection"] = null;
     echo json_encode($response);
     exit(-1);
@@ -36,6 +38,7 @@ if (!$result) {
 $response["image_collection"]=array();
 $image=array();
 while($row = mysqli_fetch_array($result)) {
+    $image["identity_profiler_id"]=$row["identity_profiler_id"];
     $image["image_url"]=$row['profiler_url'];
     $filename = end(explode("/", $image["image_url"]));
     $image["thumb_url"]=str_replace($filename, "thumbs/".$filename, $image["image_url"]);

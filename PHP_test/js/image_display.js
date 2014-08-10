@@ -44,7 +44,7 @@ function display_image(){
                     "<a class=\"thumbnail group3 cboxElement\" title=\""+ image.description +"\" href=\"."+ image.image_url +"\">"+
                         "<img src=\""+ thumb_url +"\"></img>"+
                     "</a>"+
-                    "<input type='checkbox' value='"+image.title+"' style='position: absolute'>"+
+                    "<input type='checkbox' value='"+image.identity_profiler_id+"' style='position: absolute'>"+
 
                     "<label style='text-align: center;'>"+
                         image.title+
@@ -72,8 +72,3 @@ $(document).ready(function(){
     $("#profile_select").change(display_image);
 });
 
-function soft_delete(){
-    var select_img = [];
-
-
-}

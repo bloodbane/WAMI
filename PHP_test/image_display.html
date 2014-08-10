@@ -10,7 +10,9 @@
     <script type="text/javascript" src="js/processData.js"></script>
     <script type="text/javascript" src="js/image_display.js"></script>
     <script type="text/javascript" src="js/image_upload.js"></script>
+    <script type="text/javascript" src="js/soft_delete_image.js"></script>
     <script type="text/javascript" src="js/jquery.colorbox.js"></script>
+
 
 
 
@@ -46,19 +48,23 @@
         </form>
     </div>
     -->
+
+
     <div class="col-md-2" style="width: 150px">
         <!--<div id="image"></div>-->
         <div style="vertical-align: top; margin-top: 10px;">
             <span class="btn btn-sm btn-primary btn-file">Upload New File <input id="new_image" type="file" onchange="previewImage()"></span>
-            <div id="file_type_alerts" style="padding-top: 15px"></div>
         </div>
     </div>
 
     <div class="col-md-2" style="width: 150px">
         <div style="vertical-align: top; margin-top: 10px;">
-            <button type="button" class="btn btn-danger" onclick="soft_delete()">Delete</button>
+            <button type="button" class="btn btn-danger" onclick="soft_delete_image()">Delete</button>
         </div>
     </div>
+    <div id="html_alerts" style="padding-top: 60px; width: 300px"></div>
+
+
 
     <div id="image_modal" class="modal fade">
         <div class="modal-dialog">
@@ -74,21 +80,13 @@
                     <br />
                     <div class="row">
                         <div class="col-md-4">
-                            <label>User Name</label>
-                            <input type="text" class="form-control" id="username" />
-                        </div>
-                        <div class="col-md-4">
-                            <label>Profile Id</label>
-                            <input type="text" class="form-control" id="profileid" />
-                        </div>
-                        <div class="col-md-4">
                             <label>Title</label>
                             <input type="text" class="form-control" id="title" />
                         </div>
                     </div>
                     <div class="form-group">
                         <label>Description</label>
-                        <textarea class="form-control" id="descrip" size="256"  cols="40" rows="4" style="max-width: 100%"></textarea>
+                        <textarea class="form-control" id="description" size="256"  cols="40" rows="4" style="max-width: 100%"></textarea>
                     </div>
                 </div>
                 <div class="modal-footer">
