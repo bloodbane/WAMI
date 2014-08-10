@@ -73,6 +73,7 @@ function uploadImage(){
             var ret_code = result_obj.ret_code;
             if (ret_code === -1) {
                 my_wami_alert(result_obj.message, "alert-danger", "Error!  ", "image_upload");
+
                 return;
             } else{
                 $("#image_modal").modal('hide');

@@ -179,6 +179,16 @@ $dest = $folder . "thumbs/";
 //$width = 282;
 //make_thumb($filetype, $src, $dest, $width);
 createThumbs($folder,$filename,$dest);
+
+$src = ".." . $folder . $filename;
+$dest = ".." . $folder . "thumb/" . $filename;
+$pngFile = substr($filename, 0, strrpos($filename, '.')).'.png';
+
+rename($src, $folder.$pngFile);
+rename($dest, $folder.'thumb/'.$pngFile);
+
+
+$url = 'http://localhost/wami/profilerdata/'.strtolower($username) ."/pic/".$pngFile;
 $sql = "INSERT INTO `identity_profiler`(`user_id`, `profile_id`, `category`, `media_type`, `file_type`, `profiler_url`, `title`, `file_name`,`description`, `delete_ind`, `create_date`, `modified_date`)
 								VALUES ('".$userid."','".$profileid."','Pictures','Picture','".$filetype."','".$folder . $filename."','".$title."','".$filename."','".$description."', 0, '".$date."','".$date."')";
 
@@ -189,6 +199,8 @@ if (!$result) {
     echo json_encode($response);
     exit(-1);
 }
+
+
 
 $response["ret_code"] = 0;
 $response["message"] = "New profile image saved. ";
