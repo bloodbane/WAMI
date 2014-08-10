@@ -7,14 +7,12 @@ function previewImage() {
 
     //get file and check type
     var file = document.getElementById('new_image').files[0];
-    document.getElementById("username").value="";
-    document.getElementById("profileid").value="";
+
     document.getElementById("title").value="";
-    document.getElementById("descrip").value="";
+    document.getElementById("description").value="";
     var imageType = /image.*/;
     if (!file.type.match(imageType)) {
-        my_wami_alert("File must be either a .jpg or .png image type.", "alert-danger", "Error!  ", "file_type_alerts");
-
+        my_wami_alert("File must be either a .jpg or .png image type.", "alert-danger", "Error!  ", "html_alerts");
         return;
     }
     //display file
@@ -56,12 +54,13 @@ function uploadImage(){
             identity_profile_id = document.getElementById("profile_select").value;
             console.log(identity_profile_id);
             var title = document.getElementById("title").value;
-            var descrip = document.getElementById("descrip").value;
+            var description = document.getElementById("description").value;
             var filename = file.name;
-            var username = document.getElementById("username").value;
+            var username = localStorage.getItem("username");
+            username = "Tanis";
 
             var params = "title=" + title + "&profileid=" + identity_profile_id +
-                "&descrip=" +descrip+"&filename="+filename+"&username="+username+"&image_src=" + image_src ;
+                "&description=" +description+"&filename="+filename+"&username="+username+"&image_src=" + image_src ;
             var url = "sever_script/upload_image.php";
             var status = processData(params, url, identifier);
             if (status != 200) {
@@ -100,7 +99,7 @@ function my_wami_alert (message, message_type_class, message_type_string, messag
     }
     if (message_type === "file_type_alerts")  {
         if (message === '') {
-            document.getElementById("file_type_alerts").innerHTML = message;
+            document.getElementById("html_alerts").innerHTML = message;
             return;
         }
     }
@@ -111,5 +110,5 @@ function my_wami_alert (message, message_type_class, message_type_string, messag
     if (message_type === "mywami") document.getElementById("mywami_alerts").innerHTML = alert_str;
     if (message_type === "new_profile") document.getElementById("new_profile_alerts").innerHTML = alert_str;
     if (message_type === "image_upload") document.getElementById("image_upload_alerts").innerHTML = alert_str;
-    if (message_type === "file_type_alerts") document.getElementById("file_type_alerts").innerHTML = alert_str;
+    if (message_type === "html_alerts") document.getElementById("html_alerts").innerHTML = alert_str;
 }

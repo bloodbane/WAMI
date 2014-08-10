@@ -136,10 +136,10 @@ if(isset($_POST['title'])){
 }else{
     $title = "";
 }
-if(isset($_POST['descrip'])){
-    $descrip = $_POST['descrip'];
+if(isset($_POST['description'])){
+    $description = $_POST['description'];
 }else{
-    $descrip = "";
+    $description = "";
 }
 
 $date = date("Y-m-d H:i:s");
@@ -178,7 +178,7 @@ $dest = $folder . "thumbs/";
 //make_thumb($filetype, $src, $dest, $width);
 createThumbs($folder,$filename,$dest);
 $sql = "INSERT INTO `identity_profiler`(`user_id`, `profile_id`, `category`, `media_type`, `file_type`, `profiler_url`, `title`, `file_name`,`description`, `delete_ind`, `create_date`, `modified_date`)
-								VALUES ('".$userid."','".$profileid."','Pictures','Picture','".$filetype."','".$folder . $filename."','".$title."','".$filename."','".$descrip."', 0, '".$date."','".$date."')";
+								VALUES ('".$userid."','".$profileid."','Pictures','Picture','".$filetype."','".$folder . $filename."','".$title."','".$filename."','".$description."', 0, '".$date."','".$date."')";
 
 $result = mysqli_query($con, $sql) or die(mysqli_error($con));
 if (!$result) {
