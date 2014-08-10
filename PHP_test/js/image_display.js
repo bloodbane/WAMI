@@ -44,9 +44,10 @@ function display_image(){
                     "<a class=\"thumbnail group3 cboxElement\" title=\""+ image.description +"\" href=\"."+ image.image_url +"\">"+
                         "<img src=\""+ thumb_url +"\"></img>"+
                     "</a>"+
-                    "<label style='text-align: center'>"+
-                    "<input type='checkbox' value='"+image.title+"'>"+
-                    image.title+
+                    "<input type='checkbox' value='"+image.title+"' style='position: absolute'>"+
+
+                    "<label style='text-align: center;'>"+
+                        image.title+
                     "</label>"+
                 "</div>";
         //var container = $( "<div>" ).attr("class", "col-xs-3").appendTo("#images");
@@ -70,3 +71,9 @@ $(document).ready(function(){
     display_image();
     $("#profile_select").change(display_image);
 });
+
+function soft_delete(){
+    var select_img = [];
+
+
+}

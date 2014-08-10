@@ -46,11 +46,17 @@
         </form>
     </div>
     -->
-    <div class="col-md-2" style="width: 250px">
+    <div class="col-md-2" style="width: 150px">
         <!--<div id="image"></div>-->
         <div style="vertical-align: top; margin-top: 10px;">
             <span class="btn btn-sm btn-primary btn-file">Upload New File <input id="new_image" type="file" onchange="previewImage()"></span>
             <div id="file_type_alerts" style="padding-top: 15px"></div>
+        </div>
+    </div>
+
+    <div class="col-md-2" style="width: 150px">
+        <div style="vertical-align: top; margin-top: 10px;">
+            <button type="button" class="btn btn-danger" onclick="soft_delete()">Delete</button>
         </div>
     </div>
 

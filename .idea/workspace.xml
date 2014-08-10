@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77d16f76-f811-49c4-a7cb-96c5f29c4da8" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PHP_test/profilerdata/Tanis/pic/thumbs/HW10-2.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP_test/js/image_upload.js" afterPath="$PROJECT_DIR$/PHP_test/js/image_upload.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP_test/css/display_image.css" afterPath="$PROJECT_DIR$/PHP_test/css/display_image.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP_test/image_display.html" afterPath="$PROJECT_DIR$/PHP_test/image_display.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP_test/js/image_display.js" afterPath="$PROJECT_DIR$/PHP_test/js/image_display.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WAMI.iws" />
@@ -30,8 +31,8 @@
       <file leaf-file-name="display_image.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PHP_test/css/display_image.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="302" max-vertical-offset="1065">
-              <caret line="49" column="6" selection-start-line="49" selection-start-column="6" selection-end-line="49" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="1110">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -40,8 +41,8 @@
       <file leaf-file-name="image_display.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PHP_test/image_display.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.10330579" vertical-offset="105" max-vertical-offset="1560">
-              <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.40082645" vertical-offset="579" max-vertical-offset="1650">
+              <caret line="58" column="66" selection-start-line="58" selection-start-column="66" selection-end-line="58" selection-end-column="79" />
               <folding />
             </state>
           </provider>
@@ -50,10 +51,10 @@
       <file leaf-file-name="image_display.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PHP_test/js/image_display.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="1170">
-              <caret line="30" column="24" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1275">
+              <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
               <folding>
-                <marker date="1407529398000" expanded="false" signature="1527:1545" placeholder="..." />
+                <marker date="1407547274000" expanded="false" signature="1626:1645" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -100,14 +101,14 @@
         <option value="$PROJECT_DIR$/PHP_test/test/gallery.php" />
         <option value="$PROJECT_DIR$/PHP_test/createThumbnail.php" />
         <option value="$PROJECT_DIR$/PHP_test/css/colorbox.css" />
-        <option value="$PROJECT_DIR$/PHP_test/css/display_image.css" />
         <option value="$PROJECT_DIR$/PHP_test/test/upload_image.php" />
         <option value="$PROJECT_DIR$/PHP_test/sever_script/get_image.php" />
-        <option value="$PROJECT_DIR$/PHP_test/image_display.html" />
-        <option value="$PROJECT_DIR$/PHP_test/js/image_display.js" />
         <option value="$PROJECT_DIR$/PHP_test/test/createThumbnail.php" />
         <option value="$PROJECT_DIR$/PHP_test/sever_script/upload_image.php" />
         <option value="$PROJECT_DIR$/PHP_test/js/image_upload.js" />
+        <option value="$PROJECT_DIR$/PHP_test/css/display_image.css" />
+        <option value="$PROJECT_DIR$/PHP_test/image_display.html" />
+        <option value="$PROJECT_DIR$/PHP_test/js/image_display.js" />
       </list>
     </option>
   </component>
@@ -118,8 +119,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 5.5" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="38" />
-    <option name="y" value="32" />
+    <option name="x" value="16" />
+    <option name="y" value="22" />
     <option name="width" value="1400" />
     <option name="height" value="860" />
   </component>
@@ -361,6 +362,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane">
+        <subPane />
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -456,9 +460,6 @@
             </PATH_ELEMENT>
           </PATH>
         </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane />
       </pane>
     </panes>
   </component>
@@ -870,16 +871,17 @@
       <workItem from="1407529050110" duration="1430000" />
       <workItem from="1407530767164" duration="2404000" />
       <workItem from="1407533645013" duration="659000" />
-      <workItem from="1407536011569" duration="192000" />
+      <workItem from="1407536011569" duration="1626000" />
+      <workItem from="1407554376324" duration="695000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96596000" />
+    <option name="totallyTimeSpent" value="98725000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="38" y="32" width="1400" height="860" extended-state="0" />
-    <editor active="false" />
+    <frame x="16" y="22" width="1400" height="860" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -888,7 +890,6 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996207" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -900,12 +901,13 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996207" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996207" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996207" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -936,36 +938,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/PHP_test/js/image_upload.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1185" max-vertical-offset="1800">
-          <caret line="79" column="32" selection-start-line="79" selection-start-column="32" selection-end-line="79" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHP_test/test/createThumbnail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="945">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHP_test/image_display.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="881" max-vertical-offset="1620">
-          <caret line="83" column="7" selection-start-line="83" selection-start-column="7" selection-end-line="83" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHP_test/js/image_display.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="525">
-          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PHP_test/sever_script/db_config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="285">
@@ -1229,14 +1201,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PHP_test/css/display_image.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="287" max-vertical-offset="1065">
-          <caret line="49" column="6" selection-start-line="49" selection-start-column="6" selection-end-line="49" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PHP_test/test/upload_image.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="23.32" vertical-offset="1166" max-vertical-offset="2760">
@@ -1272,13 +1236,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PHP_test/js/image_display.js">
+    <entry file="file://$PROJECT_DIR$/PHP_test/profilerdata/Tanis/pic/thumbs/figure1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP_test/profilerdata/Tanis/pic/figure1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP_test/profilerdata/Tanis/pic/thumbs/F5F9CCAC-355E-46AC-A823-C8BC3EDD628F.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP_test/profilerdata/Tanis/pic/F5F9CCAC-355E-46AC-A823-C8BC3EDD628F.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP_test/css/display_image.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1170">
-          <caret line="30" column="24" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="24" />
-          <folding>
-            <marker date="1407529398000" expanded="false" signature="1527:1545" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="1110">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1290,10 +1272,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/PHP_test/js/image_display.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1275">
+          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+          <folding>
+            <marker date="1407547274000" expanded="false" signature="1626:1645" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PHP_test/image_display.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.10330579" vertical-offset="105" max-vertical-offset="1560">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.40082645" vertical-offset="579" max-vertical-offset="1650">
+          <caret line="58" column="66" selection-start-line="58" selection-start-column="66" selection-end-line="58" selection-end-column="79" />
           <folding />
         </state>
       </provider>
