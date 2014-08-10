@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77d16f76-f811-49c4-a7cb-96c5f29c4da8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP_test/image_display.html" afterPath="$PROJECT_DIR$/PHP_test/image_display.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP_test/js/image_upload.js" afterPath="$PROJECT_DIR$/PHP_test/js/image_upload.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP_test/sever_script/upload_image.php" afterPath="$PROJECT_DIR$/PHP_test/sever_script/upload_image.php" />
     </list>
     <ignored path="WAMI.iws" />
@@ -59,7 +57,7 @@
       <file leaf-file-name="soft_delete_image.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PHP_test/js/soft_delete_image.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="990">
+            <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="990">
               <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
               <folding />
             </state>
@@ -69,8 +67,8 @@
       <file leaf-file-name="upload_image.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PHP_test/sever_script/upload_image.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="3.942857" vertical-offset="0" max-vertical-offset="3225">
-              <caret line="184" column="64" selection-start-line="184" selection-start-column="64" selection-end-line="184" selection-end-column="64" />
+            <state vertical-scroll-proportion="0.4" vertical-offset="2525" max-vertical-offset="3225">
+              <caret line="187" column="42" selection-start-line="187" selection-start-column="42" selection-end-line="187" selection-end-column="42" />
               <folding>
                 <element signature="e#6#442#0#PHP" expanded="true" />
               </folding>
@@ -81,7 +79,7 @@
       <file leaf-file-name="image_display.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PHP_test/js/image_display.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1200">
+            <state vertical-scroll-proportion="0.0" vertical-offset="77" max-vertical-offset="1200">
               <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
               <folding>
                 <marker date="1407688306000" expanded="false" signature="1641:1660" placeholder="..." />
@@ -93,7 +91,7 @@
       <file leaf-file-name="image_upload.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PHP_test/js/image_upload.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="452" max-vertical-offset="1800">
+            <state vertical-scroll-proportion="0.0" vertical-offset="482" max-vertical-offset="1800">
               <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
               <folding />
             </state>
@@ -884,12 +882,12 @@
       <workItem from="1407536011569" duration="1626000" />
       <workItem from="1407554376324" duration="7466000" />
       <workItem from="1407687794170" duration="1886000" />
-      <workItem from="1407698926225" duration="2921000" />
+      <workItem from="1407698926225" duration="3462000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110303000" />
+    <option name="totallyTimeSpent" value="110844000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="16" y="22" width="1400" height="860" extended-state="0" />
@@ -914,7 +912,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996207" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996207" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -950,13 +948,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/PHP_test/sever_script/get_image.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="525" max-vertical-offset="645">
-          <caret line="35" column="2" selection-start-line="35" selection-start-column="2" selection-end-line="35" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PHP_test/image_display.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="1620">
@@ -1309,14 +1300,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PHP_test/js/soft_delete_image.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="990">
-          <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PHP_test/image_display.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-20.875" vertical-offset="879" max-vertical-offset="1605">
@@ -1331,6 +1314,14 @@
             <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP_test/js/soft_delete_image.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="990">
+          <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1352,10 +1343,15 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/PHP_test/profilerdata/Tanis/pic/project idea.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PHP_test/sever_script/upload_image.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.942857" vertical-offset="0" max-vertical-offset="3225">
-          <caret line="184" column="64" selection-start-line="184" selection-start-column="64" selection-end-line="184" selection-end-column="64" />
+        <state vertical-scroll-proportion="0.4" vertical-offset="2525" max-vertical-offset="3225">
+          <caret line="187" column="42" selection-start-line="187" selection-start-column="42" selection-end-line="187" selection-end-column="42" />
           <folding>
             <element signature="e#6#442#0#PHP" expanded="true" />
           </folding>

@@ -181,16 +181,16 @@ $dest = $folder . "thumbs/";
 createThumbs($folder,$filename,$dest);
 
 $src = ".." . $folder . $filename;
-$dest = ".." . $folder . "thumb/" . $filename;
+$dest = ".." . $folder . "thumbs/" . $filename;
 $pngFile = substr($filename, 0, strrpos($filename, '.')).'.png';
 
 rename($src, $folder.$pngFile);
-rename($dest, $folder.'thumb/'.$pngFile);
+rename($dest, $folder.'thumbs/'.$pngFile);
 
 
 $url = 'http://localhost/wami/profilerdata/'.strtolower($username) ."/pic/".$pngFile;
 $sql = "INSERT INTO `identity_profiler`(`user_id`, `profile_id`, `category`, `media_type`, `file_type`, `profiler_url`, `title`, `file_name`,`description`, `delete_ind`, `create_date`, `modified_date`)
-								VALUES ('".$userid."','".$profileid."','Pictures','Picture','".$filetype."','".$folder . $filename."','".$title."','".$filename."','".$description."', 0, '".$date."','".$date."')";
+								VALUES ('".$userid."','".$profileid."','Pictures','Picture','png','".$url."','".$title."','".$pngFile."','".$description."', 0, '".$date."','".$date."')";
 
 $result = mysqli_query($con, $sql) or die(mysqli_error($con));
 if (!$result) {
