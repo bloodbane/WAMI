@@ -14,7 +14,7 @@
  * create_date: upload time;
  * modified_date: upload time
  */
-
+/*
 function make_thumb($ext, $src, $dest, $desired_width){
     if($ext=="jpeg" || $ext=="jpg"){
         $source_image = imagecreatefromjpeg($src);
@@ -36,7 +36,8 @@ function make_thumb($ext, $src, $dest, $desired_width){
         imagepng($virtual_image, $dest, 0);
     }
 }
-
+*/
+//crop pictures into the same size thumbnail
 function createThumbs( $folder, $fname, $pathToThumbs )
 {
     $folder = "..".$folder;
@@ -113,6 +114,7 @@ function storeImage($url, $dest, $filename){
     $image = substr($image, 1);
     $image = str_replace(' ', '+', $image);
     $data = base64_decode($image);
+
     return file_put_contents($dest.$filename, $data);
 }
 
