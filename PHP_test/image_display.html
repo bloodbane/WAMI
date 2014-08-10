@@ -74,10 +74,7 @@
                     <h4 class="modal-title">Upload Image</h4>
                 </div>
                 <div class="modal-body">
-                    <div id="image_upload_alerts" style="padding-top: 15px"></div>
-                    <br />
                     <div id="image"></div>
-                    <br />
                     <div class="row" style="text-align: center">
                         <div class="col-md-6 col-md-offset-3" style="padding-bottom: 10px">
                             <label>Title</label>
@@ -88,10 +85,12 @@
                         <label>Description</label>
                         <textarea class="form-control" id="description" size="256"  cols="40" rows="4" style="max-width: 100%"></textarea>
                     </div>
+                    <div id="image_upload_alerts" style="padding-top: 15px"></div>
+                    <div class="row" id="addup_content"></div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary" id="upload_btn" onclick="uploadImage()">Save changes</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                 </div>
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
