@@ -184,11 +184,11 @@ $src = ".." . $folder . $filename;
 $dest = ".." . $folder . "thumbs/" . $filename;
 $pngFile = substr($filename, 0, strrpos($filename, '.')).'.png';
 
-rename($src, $folder.$pngFile);
-rename($dest, $folder.'thumbs/'.$pngFile);
+rename($src, "..".$folder.$pngFile);
+rename($dest, "..".$folder.'thumbs/'.$pngFile);
 
 
-$url = 'http://localhost/wami/profilerdata/'.strtolower($username) ."/pic/".$pngFile;
+$url = $folder ."/pic/".$pngFile;
 $sql = "INSERT INTO `identity_profiler`(`user_id`, `profile_id`, `category`, `media_type`, `file_type`, `profiler_url`, `title`, `file_name`,`description`, `delete_ind`, `create_date`, `modified_date`)
 								VALUES ('".$userid."','".$profileid."','Pictures','Picture','png','".$url."','".$title."','".$pngFile."','".$description."', 0, '".$date."','".$date."')";
 
