@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="77d16f76-f811-49c4-a7cb-96c5f29c4da8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP_test/sever_script/upload_image.php" afterPath="$PROJECT_DIR$/PHP_test/sever_script/upload_image.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WAMI.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,8 +58,8 @@
       <file leaf-file-name="upload_image.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PHP_test/sever_script/upload_image.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.607438" vertical-offset="2139" max-vertical-offset="3015">
-              <caret line="186" column="35" selection-start-line="186" selection-start-column="35" selection-end-line="186" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.31142858" vertical-offset="1897" max-vertical-offset="3015">
+              <caret line="155" column="19" selection-start-line="155" selection-start-column="19" selection-end-line="155" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -773,12 +772,12 @@
       <workItem from="1407698926225" duration="4674000" />
       <workItem from="1407714111836" duration="98000" />
       <workItem from="1407714256298" duration="646000" />
-      <workItem from="1407785121570" duration="385000" />
+      <workItem from="1407785121570" duration="659000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113185000" />
+    <option name="totallyTimeSpent" value="113459000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="16" y="22" width="1400" height="860" extended-state="0" />
@@ -1182,8 +1181,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PHP_test/sever_script/upload_image.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.607438" vertical-offset="2139" max-vertical-offset="3015">
-          <caret line="186" column="35" selection-start-line="186" selection-start-column="35" selection-end-line="186" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.31142858" vertical-offset="1897" max-vertical-offset="3015">
+          <caret line="155" column="19" selection-start-line="155" selection-start-column="19" selection-end-line="155" selection-end-column="19" />
           <folding />
         </state>
       </provider>
