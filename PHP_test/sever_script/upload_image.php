@@ -150,7 +150,7 @@ $date = date("Y-m-d H:i:s");
 $filename = $_POST['filename'];
 $filetype = end(explode(".", $filename));
 $allowedExts = array("png", "jpg", "jpeg");
-$folder = "/profilerdata/" .$username."/pic/";
+$folder = "/profilerdata/" .$username."/pic/".$profileid."/";
 $dataurl = $_POST['image_src'];
 
 // Connect to MySQL
