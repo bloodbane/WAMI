@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="77d16f76-f811-49c4-a7cb-96c5f29c4da8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHP_test/css/images/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHP_test/css/images/main_bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHP_test/css/images/seamlesstexture11_1200.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHP_test/css/images/seamlesstexture19_1200.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHP_test/css/images/seamlesstexture1_1200.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHP_test/css/images/seamlesstexture24_1200.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHP_test/css/images/seamlesstexture29_1200.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PHP_test/image_display.html" afterPath="$PROJECT_DIR$/PHP_test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP_test/css/display_image.css" afterPath="$PROJECT_DIR$/PHP_test/css/display_image.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="77d16f76-f811-49c4-a7cb-96c5f29c4da8" name="Default" comment="" />
     <ignored path="WAMI.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,10 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="display_image.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="display_image.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PHP_test/css/display_image.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.2328767" vertical-offset="0" max-vertical-offset="1245">
+            <state vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1245">
               <caret line="54" column="51" selection-start-line="54" selection-start-column="51" selection-end-line="54" selection-end-column="51" />
               <folding />
             </state>
@@ -111,10 +100,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="image_upload.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="image_upload.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PHP_test/js/image_upload.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2730">
+            <state vertical-scroll-proportion="1.2111801" vertical-offset="915" max-vertical-offset="2730">
               <caret line="113" column="5" selection-start-line="113" selection-start-column="5" selection-end-line="113" selection-end-column="5" />
               <folding />
             </state>
@@ -885,12 +874,12 @@
       <workItem from="1407805809854" duration="618000" />
       <workItem from="1407809729696" duration="484000" />
       <workItem from="1407811653041" duration="3624000" />
-      <workItem from="1407821061422" duration="5045000" />
+      <workItem from="1407821061422" duration="5224000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128601000" />
+    <option name="totallyTimeSpent" value="128780000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="91" y="96" width="1224" height="777" extended-state="0" />
@@ -1286,29 +1275,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PHP_test/js/image_upload.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2730">
-          <caret line="113" column="5" selection-start-line="113" selection-start-column="5" selection-end-line="113" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PHP_test/sever_script/soft_delete_image.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.458333" vertical-offset="25" max-vertical-offset="645">
           <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHP_test/js/image_display.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="1200">
-          <caret line="42" column="39" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
-          <folding>
-            <marker date="1407825396000" expanded="false" signature="1641:1660" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1327,8 +1298,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PHP_test/css/display_image.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2328767" vertical-offset="0" max-vertical-offset="1245">
+        <state vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1245">
           <caret line="54" column="51" selection-start-line="54" selection-start-column="51" selection-end-line="54" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP_test/js/image_display.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="1200">
+          <caret line="42" column="39" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
+          <folding>
+            <marker date="1407825396000" expanded="false" signature="1641:1660" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP_test/js/image_upload.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.2111801" vertical-offset="915" max-vertical-offset="2730">
+          <caret line="113" column="5" selection-start-line="113" selection-start-column="5" selection-end-line="113" selection-end-column="5" />
           <folding />
         </state>
       </provider>
