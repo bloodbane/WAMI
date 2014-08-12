@@ -2,7 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77d16f76-f811-49c4-a7cb-96c5f29c4da8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PHP_test/profilerdata/Tanis/pic/Cute-Dog-Wallpapers.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PHP_test/profilerdata/Tanis/pic/Darth.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PHP_test/profilerdata/Tanis/pic/FlowChart.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PHP_test/profilerdata/Tanis/pic/HW10-2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PHP_test/profilerdata/Tanis/pic/dog1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PHP_test/profilerdata/Tanis/pic/dog2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PHP_test/profilerdata/Tanis/pic/doge.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PHP_test/profilerdata/Tanis/pic/figure1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PHP_test/profilerdata/Tanis/pic/flowbreeze-order-flowchart.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PHP_test/profilerdata/Tanis/pic/jb-dog.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PHP_test/profilerdata/Tanis/pic/m-sd_f.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PHP_test/profilerdata/Tanis/pic/mdog.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PHP_test/profilerdata/Tanis/pic/slop.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PHP_test/profilerdata/Tanis/pic/thumbs/Cute-Dog-Wallpapers.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PHP_test/profilerdata/Tanis/pic/thumbs/Darth.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PHP_test/profilerdata/Tanis/pic/thumbs/FlowChart.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PHP_test/profilerdata/Tanis/pic/thumbs/dog1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PHP_test/profilerdata/Tanis/pic/thumbs/dog2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PHP_test/profilerdata/Tanis/pic/thumbs/doge.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PHP_test/profilerdata/Tanis/pic/thumbs/figure1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PHP_test/profilerdata/Tanis/pic/thumbs/flowbreeze-order-flowchart.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PHP_test/profilerdata/Tanis/pic/thumbs/jb-dog.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PHP_test/profilerdata/Tanis/pic/thumbs/m-sd_f.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PHP_test/profilerdata/Tanis/pic/thumbs/mdog.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PHP_test/profilerdata/Tanis/pic/thumbs/slop.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP_test/sever_script/upload_image.php" afterPath="$PROJECT_DIR$/PHP_test/sever_script/upload_image.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WAMI.iws" />
@@ -36,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="image_display.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="image_display.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PHP_test/image_display.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1149" max-vertical-offset="1905">
-              <caret line="107" column="29" selection-start-line="107" selection-start-column="29" selection-end-line="107" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.533437" vertical-offset="152" max-vertical-offset="1905">
+              <caret line="33" column="11" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -49,18 +74,18 @@
       <file leaf-file-name="soft_delete_image.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PHP_test/js/soft_delete_image.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="310" max-vertical-offset="990">
+            <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="990">
               <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="upload_image.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="upload_image.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PHP_test/sever_script/upload_image.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.11664075" vertical-offset="0" max-vertical-offset="3210">
-              <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2505" max-vertical-offset="3420">
+              <caret line="167" column="0" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -69,7 +94,7 @@
       <file leaf-file-name="image_upload.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PHP_test/js/image_upload.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1185" max-vertical-offset="2730">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1545" max-vertical-offset="2730">
               <caret line="79" column="72" selection-start-line="79" selection-start-column="72" selection-end-line="79" selection-end-column="72" />
               <folding />
             </state>
@@ -116,8 +141,8 @@
         <option value="$PROJECT_DIR$/PHP_test/css/display_image.css" />
         <option value="$PROJECT_DIR$/PHP_test/image_display.html" />
         <option value="$PROJECT_DIR$/PHP_test/js/image_upload.js" />
-        <option value="$PROJECT_DIR$/PHP_test/sever_script/upload_image.php" />
         <option value="$PROJECT_DIR$/PHP_test/audio_display.html" />
+        <option value="$PROJECT_DIR$/PHP_test/sever_script/upload_image.php" />
       </list>
     </option>
   </component>
@@ -128,8 +153,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 5.5" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="96" />
-    <option name="y" value="61" />
+    <option name="x" value="125" />
+    <option name="y" value="22" />
     <option name="width" value="1224" />
     <option name="height" value="777" />
   </component>
@@ -183,8 +208,51 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane />
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="WAMI">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="WAMI">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="PHP_test">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="WAMI">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="PHP_test">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="profilerdata/Tanis">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
       </pane>
       <pane id="ProjectPane">
         <subPane>
@@ -282,33 +350,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="WAMI">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="WAMI">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="PHP_test">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
+      <pane id="PackagesPane">
+        <subPane />
       </pane>
     </panes>
   </component>
@@ -334,18 +377,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/PHP_test/profilerdata/Tanis" />
       <recent name="$PROJECT_DIR$/PHP_test/test" />
       <recent name="$PROJECT_DIR$/PHP_test/css" />
       <recent name="$PROJECT_DIR$/PHP_test/css/images" />
       <recent name="$PROJECT_DIR$/PHP_test/profilerdata/Tanis/pic" />
-      <recent name="$PROJECT_DIR$/PHP_test/js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/PHP_test/profilerdata/Tanis/pic" />
+      <recent name="$PROJECT_DIR$/PHP_test/profilerdata/Tanis/1/pic" />
+      <recent name="$PROJECT_DIR$/PHP_test/profilerdata/Tanis" />
       <recent name="$PROJECT_DIR$/PHP_test/test/upload" />
       <recent name="$PROJECT_DIR$/PHP_test/css" />
-      <recent name="$PROJECT_DIR$/PHP_test/profilerdata/Tanis/pic" />
-      <recent name="$PROJECT_DIR$/PHP_test" />
-      <recent name="$PROJECT_DIR$/PHP_test/test" />
     </key>
   </component>
   <component name="RunManager" selected="PHP Built-in Web Server.PHP_local">
@@ -740,15 +783,19 @@
       <workItem from="1407714111836" duration="98000" />
       <workItem from="1407714256298" duration="646000" />
       <workItem from="1407785121570" duration="5276000" />
-      <workItem from="1407804931762" duration="406000" />
+      <workItem from="1407804931762" duration="567000" />
+      <workItem from="1407805617406" duration="187000" />
+      <workItem from="1407805809854" duration="618000" />
+      <workItem from="1407809729696" duration="484000" />
+      <workItem from="1407811653041" duration="416000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118482000" />
+    <option name="totallyTimeSpent" value="120348000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="96" y="61" width="1224" height="777" extended-state="0" />
+    <frame x="125" y="22" width="1224" height="777" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -759,6 +806,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996207" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -776,7 +824,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996207" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -807,6 +854,38 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/PHP_test/js/soft_delete_image.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="990">
+          <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP_test/sever_script/upload_image.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2505" max-vertical-offset="3420">
+          <caret line="167" column="0" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP_test/js/image_upload.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1545" max-vertical-offset="2730">
+          <caret line="79" column="72" selection-start-line="79" selection-start-column="72" selection-end-line="79" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP_test/css/display_image.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="1110">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PHP_test/sever_script/get_image.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="525" max-vertical-offset="645">
@@ -984,11 +1063,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PHP_test/profilerdata/Tanis/pic/thumbs/mdog.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PHP_test/css/images/loading.gif">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1041,16 +1115,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PHP_test/profilerdata/Tanis/pic/thumbs/figure1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHP_test/profilerdata/Tanis/pic/figure1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PHP_test/sever_script/get_image.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.20391062" vertical-offset="4" max-vertical-offset="795">
@@ -1070,21 +1134,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1200">
           <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHP_test/profilerdata/Tanis/pic/thumbs/slop.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHP_test/profilerdata/Tanis/pic/slop.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHP_test/profilerdata/Tanis/pic/flowbreeze-order-flowchart.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PHP_test/js/bootstrap.js">
@@ -1109,17 +1158,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PHP_test/image_display.html">
+    <entry file="file://$PROJECT_DIR$/PHP_test/js/soft_delete_image.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1149" max-vertical-offset="1905">
-          <caret line="107" column="29" selection-start-line="107" selection-start-column="29" selection-end-line="107" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="310" max-vertical-offset="990">
+          <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHP_test/profilerdata/Tanis/pic/thumbs/Darth.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PHP_test/js/image_upload.js">
@@ -1130,18 +1174,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PHP_test/js/soft_delete_image.js">
+    <entry file="file://$PROJECT_DIR$/PHP_test/sever_script/upload_image.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="310" max-vertical-offset="990">
-          <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2505" max-vertical-offset="3420">
+          <caret line="167" column="0" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PHP_test/sever_script/upload_image.php">
+    <entry file="file://$PROJECT_DIR$/PHP_test/image_display.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11664075" vertical-offset="0" max-vertical-offset="3210">
-          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.533437" vertical-offset="152" max-vertical-offset="1905">
+          <caret line="33" column="11" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
           <folding />
         </state>
       </provider>
