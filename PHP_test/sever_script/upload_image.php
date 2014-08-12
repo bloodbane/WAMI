@@ -105,17 +105,25 @@ function get_userid($name, $con){
     }
 }
 
-function storeImage($url, $dest, $filename){
+function storeImage($url, $dest, $filename,$replace){
     $dest= "..".$dest;
-    if(file_exists($dest.$filename)){
-        return false;
+    if(!$replace){
+        if(file_exists($dest.$filename)){
+            return false;
+        }
+        $image = strstr($url, ',');
+        $image = substr($image, 1);
+        $image = str_replace(' ', '+', $image);
+        $data = base64_decode($image);
+        return file_put_contents($dest.$filename, $data);
+    }else{
+        $image = strstr($url, ',');
+        $image = substr($image, 1);
+        $image = str_replace(' ', '+', $image);
+        $data = base64_decode($image);
+        return file_put_contents($dest.$filename, $data);
     }
-    $image = strstr($url, ',');
-    $image = substr($image, 1);
-    $image = str_replace(' ', '+', $image);
-    $data = base64_decode($image);
 
-    return file_put_contents($dest.$filename, $data);
 }
 
 $response = array();
@@ -143,6 +151,11 @@ if(isset($_POST['description'])){
 }else{
     $description = "";
 }
+if(isset($_POST['replace'])){
+    $replace = $_POST['replace'];
+}else{
+    $replace = false;
+}
 
 $date = date("Y-m-d H:i:s");
 
@@ -165,7 +178,7 @@ if($userid == -1){
     exit(-1);
 }
 
-if(!storeImage($dataurl, $folder, $filename)){
+if(!storeImage($dataurl, $folder, $filename, $replace)){
     $response["ret_code"] = -1;
     $response["message"] = 'File('. $filename . ') already exists!';
     echo json_encode($response);
