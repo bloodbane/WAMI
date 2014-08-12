@@ -47,7 +47,16 @@ label {
     display: block;
     font-family:"Arial Black", Gadget, sans-serif;
 }
-
+img.logo{
+    max-width : 100%;
+    max-height: 100%;
+}
+body {
+    background-image: url('images/seamlesstexture24_1200.jpg');
+    background-repeat:repeat;
+    background-color: #cccccc;
+    background-attachment: scroll;margin: auto;
+}
 /*
 input {
     //position: absolute;
