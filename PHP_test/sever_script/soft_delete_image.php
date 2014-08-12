@@ -18,10 +18,10 @@ $con->autocommit(FALSE);
 
 $sql="UPDATE `wami`.`identity_profiler` SET `delete_ind` = '1' WHERE `identity_profiler`.`identity_profiler_id` IN (". $images.")";
 
-$result = mysqli_query($con,$sql) or die(mysqli_error($con));
+$result = mysqli_query($con,$sql);
 
 if (!$result) {
-    $response["message"] = "soft_delete_image: Problem creating default profile: " .$username. " MySQL Error: " .mysqli_error($con);
+    $response["message"] = "soft_delete_image: Problem delete picture for " .$username. " MySQL Error: " .mysqli_error($con);
     $response["ret_code"] = -1;
     $con->rollback();
     $con->autocommit(TRUE);
