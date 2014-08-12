@@ -105,24 +105,51 @@ function get_userid($name, $con){
     }
 }
 
-function storeImage($url, $dest, $filename,$replace){
+function storeImage($dataurl, $dest, $filename, $pngFile){
     $dest= "..".$dest;
-    if(!$replace){
-        if(file_exists($dest.$filename)){
-            return false;
-        }
-        $image = strstr($url, ',');
-        $image = substr($image, 1);
-        $image = str_replace(' ', '+', $image);
-        $data = base64_decode($image);
-        return file_put_contents($dest.$filename, $data);
-    }else{
-        $image = strstr($url, ',');
-        $image = substr($image, 1);
-        $image = str_replace(' ', '+', $image);
-        $data = base64_decode($image);
-        return file_put_contents($dest.$filename, $data);
+
+    if(file_exists($dest.$pngFile)){
+        return false;
     }
+    $image = strstr($dataurl, ',');
+    $image = substr($image, 1);
+    $image = str_replace(' ', '+', $image);
+    $data = base64_decode($image);
+    return file_put_contents($dest.$filename, $data);
+
+
+}
+
+function replaceImage($dataurl, $dest, $filename, $pngFile, $con, $userid, $profileid){
+    $dest= "..".$dest;
+
+    $sql="SELECT * FROM `identity_profiler` WHERE (`user_id` = ".$userid." AND " .
+        "`profile_id` = ". $profileid . " AND "."`file_name`='".$pngFile."')";
+
+    $result = mysqli_query($con,$sql);
+    $del_image = "";
+    while($row = mysqli_fetch_array($result)){
+        $del_image = $del_image . $row['identity_profiler_id'].",";
+    }
+    $del_image = substr($del_image,0, strlen($del_image)-1);
+
+    $sql = "UPDATE `wami`.`identity_profiler` SET `delete_ind` = '2' WHERE `identity_profiler`.`identity_profiler_id` IN (". $del_image.")";
+    $result = mysqli_query($con,$sql);
+
+    if (!$result) {
+        $response["message"] = "upload_image: Problem replace picture, MySQL Error: " .mysqli_error($con);
+        $response["ret_code"] = -1;
+        $con->rollback();
+        $con->autocommit(TRUE);
+        echo json_encode($response);
+        exit(-1);
+    }
+
+    $image = strstr($dataurl, ',');
+    $image = substr($image, 1);
+    $image = str_replace(' ', '+', $image);
+    $data = base64_decode($image);
+    return file_put_contents($dest.$filename, $data);
 
 }
 
@@ -166,6 +193,8 @@ $allowedExts = array("png", "jpg", "jpeg");
 $folder = "/profilerdata/" .$username."/".$profileid."/pic/";
 $dataurl = $_POST['image_src'];
 
+$pngFile = substr($filename, 0, strrpos($filename, '.')).'.png';
+
 // Connect to MySQL
 $db = new DB_CONNECT();
 $con = $db->connect();
@@ -178,12 +207,17 @@ if($userid == -1){
     exit(-1);
 }
 
-if(!storeImage($dataurl, $folder, $filename, $replace)){
-    $response["ret_code"] = -1;
-    $response["message"] = 'File('. $filename . ') already exists!';
-    echo json_encode($response);
-    exit(-1);
+if($replace){
+    replaceImage($dataurl, $folder, $filename, $pngFile, $con, $userid, $profileid);
+}else{
+    if(!storeImage($dataurl, $folder, $filename, $pngFile, $replace)){
+        $response["ret_code"] = -1;
+        $response["message"] = 'File('. $filename . ') already exists!';
+        echo json_encode($response);
+        exit(-1);
+    }
 }
+
 
 //$src = $folder . $filename;
 
