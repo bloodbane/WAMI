@@ -87,12 +87,16 @@ function createThumbs( $folder, $fname, $pathToThumbs )
     // create a new temporary image
     $tmp_img = imagecreatetruecolor( $thumb_w, $thumb_h );
 
-    // copy and resize old image into new image
-    imagecopyresized( $tmp_img, $img, 0, 0, $crop_x, $crop_y, $thumb_w, $thumb_h, $new_w, $new_h );
-
-    // save thumbnail into a file
-    imagepng( $tmp_img, "{$pathToThumbs}{$fname}" );
-
+    if (preg_match('/jpg|jpeg/',$system[sizeof($system)-1])){
+        imagecopyresampled($tmp_img, $img, 0, 0, $crop_x, $crop_y, $thumb_w, $thumb_h, $new_w, $new_h);
+        imagejpeg($tmp_img, "{$pathToThumbs}{$fname}", 100);
+    }
+    if (preg_match('/png/',$system[sizeof($system)-1])){
+        imagealphablending($tmp_img, false);
+        imagesavealpha($tmp_img, true);
+        imagecopyresampled($tmp_img, $img, 0, 0, $crop_x, $crop_y, $thumb_w, $thumb_h, $new_w, $new_h);
+        imagepng($tmp_img, "{$pathToThumbs}{$fname}", 0);
+    }
 }
 
 
