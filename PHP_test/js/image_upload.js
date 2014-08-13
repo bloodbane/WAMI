@@ -119,7 +119,7 @@ function replace_image(){
         return;
         localStorage.clear();
     } else{
-        $("#message_modal").modal('hide');
+        $("#replace_modal").modal('hide');
         display_image();
         localStorage.clear();
     }
