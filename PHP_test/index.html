@@ -32,7 +32,7 @@
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#home" role="tab" data-toggle="tab">Home</a></li>
                 <li><a href="#profile" role="tab" data-toggle="tab">Profile</a></li>
-                <li><a href="#messages" role="tab" data-toggle="tab">Messages</a></li>
+                <li><a href="https://github.com/WAMI-ITP/WAMI">Source Code</a></li>
                 <li><a href="#settings" role="tab" data-toggle="tab">Settings</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
@@ -64,6 +64,19 @@
 
 
 <div class="container"style="padding-top: 50px">
+
+    <div class="clearfix">
+        <div class="pull-left">
+            <h1>Media Gallery Demo</h1>
+            <h2 class="lead">Image</h2>
+        </div>
+    </div>
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="index.html">Image</a></li>
+        <li><a href="video_display.html">Video</a></li>
+        <li><a href="audio_display.html">Audio</a></li>
+        <li><a href="text_display.html">Text</a></li>
+    </ul>
 
     <div id="test" class="container" style="padding-top: 15px">
 
@@ -131,7 +144,7 @@
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 
-    <div id="message_modal" class="modal fade">
+    <div id="replace_modal" class="modal fade">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -139,12 +152,30 @@
                     <h4 class="modal-title">Warning</h4>
                 </div>
                 <div class="modal-body">
-                    <div id="replace_image"></div>
+                    <div id="replace_file"></div>
 
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary"  onclick="replace_image()">Replace</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div id="message_modal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">Message</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="message"></div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
                 </div>
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
