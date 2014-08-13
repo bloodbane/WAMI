@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Image</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/processData.js"></script>
+    <script type="text/javascript" src="js/image_display.js"></script>
+    <script type="text/javascript" src="js/image_upload.js"></script>
+    <script type="text/javascript" src="js/soft_delete_image.js"></script>
+    <script type="text/javascript" src="js/jquery.colorbox.js"></script>
+
+
+
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/display_image.css" rel="stylesheet">
+    <link href="css/colorbox.css" rel="stylesheet">
+
+
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"><img class="logo" src="css/images/logo.png"></a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#home" role="tab" data-toggle="tab">Home</a></li>
+                <li><a href="#profile" role="tab" data-toggle="tab">Profile</a></li>
+                <li><a href="https://github.com/WAMI-ITP/WAMI">Source Code</a></li>
+                <li><a href="#settings" role="tab" data-toggle="tab">Settings</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Nav header</li>
+                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <div style="width: 180px; padding-top: 8px; padding-right: 30px" >
+                    <select class="form-control" id="profile_select">
+                        <option value="0">Dog Lover</option>
+                        <option value="1">Programmer</option>
+                        <option value="2">Musician</option>
+                    </select>
+                </div>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</div>
+
+
+
+
+<div class="container"style="padding-top: 50px">
+
+    <div class="clearfix">
+        <div class="pull-left">
+            <h1>Media Gallery Demo</h1>
+            <h2 class="lead">Audio</h2>
+        </div>
+    </div>
+    <ul class="nav nav-tabs">
+        <li><a href="index.html">Image</a></li>
+        <li><a href="video_display.html">Video</a></li>
+        <li class="active"><a href="audio_display.html">Audio</a></li>
+        <li><a href="text_display.html">Text</a></li>
+    </ul>
+
+    <div id="test" class="container" style="padding-top: 15px">
+
+
+        <div id="images" class="row" style="padding-top: 15px"></div>
+    </div>
+
+
+    <br />
+
+    <!--
+    <div>
+        <form action="sever_script/upload_image.php" method="post" enctype="multipart/form-data">
+            <label for="file">Filename:</label>
+            <input type="file" name="file" id="file"><br>
+            <input type="submit" name="submit" value="Submit">
+        </form>
+    </div>
+    -->
+
+
+    <div class="col-md-2" style="width: 150px">
+        <!--<div id="image"></div>-->
+        <div style="vertical-align: top; margin-top: 10px;">
+            <span class="btn btn-sm btn-primary btn-file">Upload New File <input id="new_image" type="file" onchange="previewImage()"></span>
+        </div>
+    </div>
+
+    <div class="col-md-2" style="width: 150px">
+        <div style="vertical-align: top; margin-top: 10px;">
+            <button type="button" class="btn btn-danger" onclick="soft_delete_image()">Delete</button>
+        </div>
+    </div>
+    <div id="html_alerts" style="padding-top: 60px; width: 300px"></div>
+
+
+
+    <div id="image_modal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">Upload Image</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="image"></div>
+                    <div class="row" style="text-align: center">
+                        <div class="col-md-6 col-md-offset-3" style="padding-bottom: 10px">
+                            <label>Title</label>
+                            <input type="text" class="form-control" id="title" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea class="form-control" id="description" size="256"  cols="40" rows="4" style="max-width: 100%"></textarea>
+                    </div>
+                    <div id="image_upload_alerts" style="padding-top: 15px"></div>
+                    <div class="row" id="addup_content"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="upload_btn" onclick="uploadImage()">Save changes</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div id="message_modal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">Warning</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="replace_image"></div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary"  onclick="replace_image()">Replace</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+</div>
+
+</body>
+</html>
