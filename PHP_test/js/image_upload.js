@@ -45,6 +45,14 @@ function uploadImage(){
     //localStorage.clear();
     var identifier = "result";
 
+    byte_reader.onload =
+        function (){
+            $("#image_modal").modal('hide');
+            var content = "<img src = css/images/uploading.gif><p>Uploading File</p>";
+            document.getElementById('message').innerHTML=content;
+            $("#message_modal").modal('show');
+        }
+
     //save to file system and database
     byte_reader.onloadend =
         function () {
@@ -62,6 +70,9 @@ function uploadImage(){
             var params = "title=" + title + "&profileid=" + identity_profile_id +
                 "&description=" +description+"&filename="+filename+"&username="+username+"&image_src=" + image_src ;
             var url = "sever_script/upload_image.php";
+            $("#image_modal").modal('hide');
+
+
             var status = processData(params, url, identifier);
             if (status != 200) {
                 my_wami_alert("Error getting web page: status = " + status, "alert-danger", "Error!  ", "image_upload");
@@ -69,20 +80,20 @@ function uploadImage(){
             }
             var result_data = localStorage.getItem(identifier);
             var result_obj = JSON.parse(result_data);
-
             var ret_code = result_obj.ret_code;
             if (ret_code === -1) {
                 //my_wami_alert(result_obj.message, "alert-danger", "Error!  ", "image_upload");
-                $("#image_modal").modal('hide');
                 localStorage.setItem('upload_params', params);
                 console.log(filename);
                 console.log(strrpos('filename', '.'));
-                var content = filename.substring(0, strrpos(filename, '.'))+".png "+"is already exist. Do you want to replace it?";
-                document.getElementById('replace_image').innerHTML=content;
-                $("#message_modal").modal('show');
+                content = filename.substring(0, strrpos(filename, '.'))+".png "+"is already exist. Do you want to replace it?";
+                document.getElementById('replace_file').innerHTML=content;
+                $("#message_modal").modal('hide');
+                $("#replace_modal").modal('show');
                 return;
             } else{
-                $("#image_modal").modal('hide');
+                content = "File: "+ filename + " uploaded.";
+                document.getElementById('message').innerHTML=content;
                 display_image();
             }
 
