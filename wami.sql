@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 13, 2014 at 09:30 PM
+-- Generation Time: Aug 14, 2014 at 05:38 PM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.11
 
@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `identity_profiler` (
   `create_date` datetime NOT NULL,
   `modified_date` datetime NOT NULL,
   PRIMARY KEY (`identity_profiler_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=57 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=62 ;
 
 --
 -- Dumping data for table `identity_profiler`
@@ -68,7 +68,35 @@ INSERT INTO `identity_profiler` (`identity_profiler_id`, `user_id`, `profile_id`
 (47, 18, 1, 'Pictures', 'Picture', 'png', '/profilerdata/Tanis/1/pic/Darth.png', '', 'Darth.png', '', 2, '2014-08-12 07:44:50', '2014-08-12 07:44:50'),
 (48, 18, 1, 'Pictures', 'Picture', 'png', '/profilerdata/Tanis/1/pic/Darth.png', '', 'Darth.png', '', 2, '2014-08-12 07:46:20', '2014-08-12 07:46:20'),
 (49, 18, 2, 'Pictures', 'Picture', 'png', '/profilerdata/Tanis/2/pic/Plain_White_Ts-Hey_There_Delilah-AGuitar.png', '', 'Plain_White_Ts-Hey_There_Delilah-AGuitar.png', '', 0, '2014-08-12 23:35:30', '2014-08-12 23:35:30'),
-(50, 18, 1, 'Pictures', 'Picture', 'png', '/profilerdata/Tanis/1/pic/Darth.png', '', 'Darth.png', '', 1, '2014-08-13 03:35:04', '2014-08-13 03:35:04');
+(50, 18, 1, 'Pictures', 'Picture', 'png', '/profilerdata/Tanis/1/pic/Darth.png', '', 'Darth.png', '', 2, '2014-08-13 03:35:04', '2014-08-13 03:35:04'),
+(57, 18, 1, 'Videos', 'Video', 'mp4', '/profilerdata/Tanis/1/video/Lucy Trailer 2.mp4', '', 'Lucy Trailer 2.mp4', '', 0, '2014-08-13 21:53:40', '2014-08-13 21:53:40'),
+(58, 18, 1, 'Videos', 'Video', 'mp4', '/profilerdata/Tanis/1/video/Hobbit.mp4', '', 'Hobbit.mp4', '', 0, '2014-08-13 22:28:13', '2014-08-13 22:28:13'),
+(59, 18, 0, 'Audios', 'Audio', 'mp3', '/profilerdata/Tanis/0/audio/Dog Howling.mp3', '', 'Dog Howling.mp3', '', 0, '2014-08-14 08:31:14', '2014-08-14 08:31:14'),
+(60, 18, 0, 'Audios', 'Audio', 'mp3', '/profilerdata/Tanis/0/audio/Dogs Barking.mp3', '', 'Dogs Barking.mp3', '', 0, '2014-08-14 08:32:00', '2014-08-14 08:32:00'),
+(61, 18, 0, 'Audios', 'Audio', 'mp3', '/profilerdata/Tanis/1/pic/Prairie Dog.mp3', 'Prairie Dog', 'Prairie Dog.mp3', '', 1, '2014-08-14 08:32:20', '2014-08-14 08:32:20');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE IF NOT EXISTS `user` (
+  `user_id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(80) NOT NULL,
+  `delete_ind` tinyint(1) NOT NULL,
+  `create_date` datetime NOT NULL,
+  `modified_date` datetime NOT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=74 ;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`user_id`, `username`, `delete_ind`, `create_date`, `modified_date`) VALUES
+(18, 'Tanis', 0, '2014-07-30 00:00:00', '2014-08-02 00:00:00'),
+(73, '', 0, '2014-07-10 10:49:28', '2014-07-10 10:49:28');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
