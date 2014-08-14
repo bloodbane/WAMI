@@ -214,7 +214,7 @@ if($userid == -1){
 if($replace){
     replaceImage($dataurl, $folder, $filename, $pngFile, $con, $userid, $profileid);
 }else{
-    if(!storeImage($dataurl, $folder, $filename, $pngFile, $replace)){
+    if(!storeImage($dataurl, $folder, $filename, $pngFile)){
         $response["ret_code"] = -1;
         $response["message"] = 'File('. $filename . ') already exists!';
         echo json_encode($response);
