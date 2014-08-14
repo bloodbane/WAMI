@@ -1,0 +1,58 @@
+.modal-body{
+    text-align: center;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 999px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+.audio-dis-col{
+    height: 100px;
+    width: 380px;
+    overflow: hidden;
+}
+/*
+.preview{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.thumbnail{
+    margin: 0;
+}
+*/
+label {
+    display: block;
+    font-family:"Arial Black", Gadget, sans-serif;
+}
+
+img.logo{
+    max-width : 100%;
+    max-height: 100%;
+}
+body {
+    background-image: url('images/seamlesstexture24_1200.jpg');
+    background-repeat:repeat;
+    background-color: #cccccc;
+    background-attachment: scroll;margin: auto;
+}
+
+
+
