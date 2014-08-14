@@ -23,7 +23,8 @@ if (isset($_POST["order"])){
 }
 
 $sql="SELECT * FROM `identity_profiler` WHERE (`user_id` = ".$user_id." AND " .
-        "`profile_id` = ". $profile_id . " AND " . " `delete_ind` = 0 " . ") ORDER BY ".$order;
+        "`profile_id` = ". $profile_id . " AND " . " `delete_ind` = 0 " .
+        " AND `category` = 'Pictures'" . ") ORDER BY ".$order;
 $result = mysqli_query($con,$sql) or die(mysqli_error($con));
 if (!$result) {
     $response["message"] = "POST_image: Problem POST image: " . $username . " MySQL Error: " . mysqli_error($con);
