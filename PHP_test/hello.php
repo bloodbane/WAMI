@@ -120,7 +120,12 @@
     <br />
 
     <div id="Lucy_2">Loading the player...</div>
+    <div>
+        <video width="480" height="270" controls>
+            <source src="./videos/Lucy TRAILER 1 (2014) - Luc Besson, Scarlett Johansson Movie HD.mp4" type="video/mp4">
 
+        </video>
+    </div>
     <div>
         <form action="sever_script/upload_image.php" method="post"
                enctype="multipart/form-data">

@@ -21,7 +21,7 @@ $(document).ready(function(){
     });
 
     jwplayer("Lucy_2").setup({
-        file: "./videos/Lucy Trailer 2.mp4"//,
+        file: "./videos/Lucy TRAILER 1 (2014) - Luc Besson, Scarlett Johansson Movie HD.mp4"//,
         //image: "/videos/myPoster.jpg"
     });
 });
