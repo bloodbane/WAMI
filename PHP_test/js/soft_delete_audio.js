@@ -1,27 +1,29 @@
 /**
- * Created by tanis on 8/9/14.
+ * Created by tanis on 8/14/14.
  */
+
+
 
 $(document).ready(function(){
 
 });
 
-function image_select(){
-    var images="";
-    $(".image-dis-col input:checkbox:checked").each(function(){
+function audio_select(){
+    var audios="";
+    $(".audio-dis-col input:checkbox:checked").each(function(){
         if (this.checked) {
-            images+=$(this).val()+",";
+            audios+=$(this).val()+",";
         }
     });
-    return images.substring(0, images.length-1);
+    return audios.substring(0, audios.length-1);
 }
 
 function delete_request(){
 
-    var url = "sever_script/soft_delete_image.php";
-    var images = image_select();
-    console.log(images);
-    var params = "user_id=18"+"&images="+images;
+    var url = "sever_script/soft_delete_audio.php";
+    var audios = audio_select();
+    console.log(audios);
+    var params = "user_id=18"+"&audios="+audios;
     var identifier = "result";
 
 
@@ -42,20 +44,20 @@ function delete_request(){
     return {"ret_code":ret_code, "message":message};
 }
 
-function soft_delete_image(){
+function soft_delete_audio(){
     var count=0;
-    $(".image-dis-col input:checkbox:checked").each(function(){
+    $(".audio-dis-col input:checkbox:checked").each(function(){
         if (this.checked) {
             count ++;
         }
     });
     if(count===0){
-        my_wami_alert("You need to select a image to delete", "alert-danger", "Error!  ", "html_alerts");
+        my_wami_alert("You need to select a audio to delete", "alert-danger", "Error!  ", "html_alerts");
         return;
     }else{
 
         var result_obj = delete_request();
 
-        display_image();
+        display_audio();
     }
 }
